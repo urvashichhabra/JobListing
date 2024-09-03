@@ -52,3 +52,14 @@ export default tseslint.config({
   },
 });
 ```
+# React Notes
+
+- [ ] Virtual DOM - is a lightweight copy of actual DOM. (Document Object Model)
+
+When state of a component changes, virtual Dom changes first and then react compares the virtual dom and actual dom and updates the parts that needs update.
+              State => Compare => Re-render
+
+- [ ] Hooks allow function components to have access to state and other React features such as lifecycle methods
+- [ ] JSX - Javascript Syntax Extension - HTML inside javascript
+- [ ] VITE - front end toolkit, fast development server build on top of ESBuild (ESBuild is a very fast JS Bundler) with hot reload.   npm create vite@latest job-listing
+
