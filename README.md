@@ -2,6 +2,10 @@
 
 React Job Listing Website
 
+<img width="481" alt="Screenshot 2024-09-10 at 11 55 19 AM" src="https://github.com/user-attachments/assets/eeef0604-fd05-4fcb-a468-56aa38bc27fa">
+
+<img width="481" alt="Screenshot 2024-09-10 at 11 55 35 AM" src="https://github.com/user-attachments/assets/f0dd8793-e6bb-4ea6-8cd6-dd48167573b5">
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
