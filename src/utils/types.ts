@@ -4,5 +4,13 @@ export interface IJob {
   description: string;
   salary: string;
   location: string;
-  id: string;
+  id?: string;
+  company: IJobCompany;
+}
+
+export interface IJobCompany {
+  name: string;
+  description: string;
+  contactEmail: string;
+  contactPhone: string;
 }
