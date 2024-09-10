@@ -10,6 +10,18 @@ React Job Listing Website
 
 <img width="481" alt="Screenshot 2024-09-10 at 7 05 05 PM" src="https://github.com/user-attachments/assets/f8217377-0b96-4312-928c-5751138c6e33">
 
+
+# Highlights
+
+- react
+- react-icons
+- react-spinners
+- react-toastify
+- json-server (Mockend - Mock Backend with json file)
+- vite
+- formik
+- typescript
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
