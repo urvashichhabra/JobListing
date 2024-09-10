@@ -66,4 +66,5 @@ When state of a component changes, virtual Dom changes first and then react comp
 - [ ] Hooks allow function components to have access to state and other React features such as lifecycle methods
 - [ ] JSX - Javascript Syntax Extension - HTML inside javascript
 - [ ] VITE - front end toolkit, fast development server build on top of ESBuild (ESBuild is a very fast JS Bundler) with hot reload.   npm create vite@latest job-listing
+- [ ] dependencies are required to run, devDependencies only to develop, e.g.: unit tests, CoffeeScript to JavaScript transpilation, minification, ...
 
