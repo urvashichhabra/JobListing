@@ -1,40 +1,28 @@
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { IJob } from "../utils/types";
 import { Form, Formik } from "formik";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const newJob: IJob = {
-  location: "",
-  title: "",
-  description: "",
-  salary: "Under $50K",
-  type: "Full-Time",
-  company: {
-    name: "",
-    contactEmail: "",
-    contactPhone: "",
-    description: "",
-  },
-};
-
-const AddJobPage = ({ addJob }: { addJob: (formData: IJob) => void }) => {
+const EditJobPage = ({ updateJob }: { updateJob: (jobData: IJob) => void }) => {
+  const job = useLoaderData() as IJob;
   const navigate = useNavigate();
+
   return (
     <section className="bg-indigo-50">
       <div className="container m-auto max-w-2xl py-24">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <Formik
-            initialValues={newJob}
+            initialValues={job}
             onSubmit={(formData: IJob) => {
-              addJob(formData);
-              toast.success("Job Added Successfully");
+              updateJob(formData);
+              toast.success("Job Updated Successfully");
               navigate("/jobs");
             }}
           >
             {({ values, handleChange, setFieldValue }) => (
               <Form>
                 <h2 className="text-3xl text-center font-semibold mb-6">
-                  Add Job
+                  Update Job
                 </h2>
 
                 <div className="mb-4">
@@ -224,7 +212,7 @@ const AddJobPage = ({ addJob }: { addJob: (formData: IJob) => void }) => {
                     className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
-                    Add Job
+                    Update Job
                   </button>
                 </div>
               </Form>
@@ -236,4 +224,4 @@ const AddJobPage = ({ addJob }: { addJob: (formData: IJob) => void }) => {
   );
 };
 
-export default AddJobPage;
+export default EditJobPage;

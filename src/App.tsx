@@ -1,4 +1,3 @@
-import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,6 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import JobPage, { jobLoader } from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
 import { IJob } from "./utils/types";
+import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
   const addJob = async (newJob: IJob) => {
@@ -21,6 +21,14 @@ const App = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newJob),
+    });
+    return;
+  };
+
+  const updateJob = async (job: IJob) => {
+    await fetch(`/api/jobs/${job.id}`, {
+      method: "PUT",
+      body: JSON.stringify(job),
     });
     return;
   };
@@ -38,6 +46,11 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/add-job" element={<AddJobPage addJob={addJob} />} />
+        <Route
+          path="/edit-job/:id"
+          element={<EditJobPage updateJob={updateJob} />}
+          loader={jobLoader}
+        />
         <Route
           path="/job/:id"
           element={<JobPage deleteJob={deleteJob} />}

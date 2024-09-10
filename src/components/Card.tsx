@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
-
 const Card = ({
   children,
   bg = "bg-gray-100",
